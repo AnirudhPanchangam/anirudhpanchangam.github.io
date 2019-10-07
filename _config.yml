@@ -29,7 +29,7 @@ twitter_username: AniPanchangam
 github_username:  anirudhpanchangam
 
 # Build settings
-theme: jekyll-theme-minimal
+theme: jekyll-theme-cayman
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
