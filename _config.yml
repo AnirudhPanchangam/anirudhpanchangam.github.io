@@ -21,7 +21,7 @@
 title: the_teck_nerd
 email: the_nerd@thetecknerd.com
 description: >- # this means to ignore newlines until "baseurl:"
-  The Ultimate How To Guide
+  The Ultimate Guide
   to Geek out on Technology.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.thetecknerd.com" # the base hostname & protocol for your site, e.g. http://example.com
