@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Hello World"
+title:  "Hello, World"
 date:   2019-10-07 21:06:35 +0530
 categories: programming
 ---
