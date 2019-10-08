@@ -22,7 +22,7 @@ title: the_teck_nerd
 email: the_nerd@thetecknerd.com
 description: >- # this means to ignore newlines until "baseurl:"
   The Ultimate Guide
-  to Geek out on Technology.
+  to Geeking out on Technology.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.thetecknerd.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: AniPanchangam
@@ -35,6 +35,7 @@ plugins:
   - jekyll-seo-tag
 
 google_analytics: UA-149576001-1
+show_excerpts: true
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
