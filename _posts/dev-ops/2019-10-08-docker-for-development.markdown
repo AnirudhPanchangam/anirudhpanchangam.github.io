@@ -9,7 +9,7 @@ published: false
 ---
 ![Docker Image](/assets/docker.png)  
 <!--more-->
-[tl;dr](#Let's get started) Link, if you want to skip the half assed introduction and get to the good stuff.
+<!-- [tl;dr](#Let's get started) Link, if you want to skip the half assed introduction and get to the good stuff. -->
 
 ## Introduction ##
 
@@ -24,10 +24,9 @@ For example, you could run an *Ubuntu-18.04* container on your *Ubuntu-19.04* ho
 
 ## Goal ##
 
-Befor we head out on our journey to setup a docker development environemt,  
-I believe it is a good idea to define what we want to achieve with this sort of a  
-setup.
-Let us first define a web based application that we may want to create an environemnt for.  
+Befor we head out on our journey of setting up a docker development environemt,  
+I believe it is a good idea to define what we want to achieve.
+Let us first define a very generic web based application that we may want to create an environemnt for.  
 Let me list my application as having the following dependencies:
     
     - nodejs-10
@@ -37,12 +36,12 @@ Let me list my application as having the following dependencies:
         - postgres
     - cache:
         - redis
-    - messaging service:
+    - messaging-service:
         - rabbitmq
     - server:
         - nginx
 
-So, to summarize what i've jotted down, our application will have:
+So, to summarize what I've jotted down, our application will have:
 
 1) HTTP service written in **nodejs**.  
 2) A python service that listens on queues on rabbitmq.  
@@ -52,5 +51,20 @@ So, to summarize what i've jotted down, our application will have:
 6) An nginx server that acts as a reverse proxy for the application. This is however completely optional
    and can be brought in later. This mainly exists if your application in the production strictly depends on a server  for file uploads and various other things like load balancing between multiple workers, etc.  
 
-Now, in my mind, i want it to work like so:  
-![Docker Containers](/assets/setup.png)
+Now, in my mind, I want it to work like so:  
+
+![Docker Containers](/assets/setup.png)  
+
+> “Life is really simple, but we insist on making it complicated.”
+    ― Confucius
+
+Now, before we move further along, I believe I need to explain what this diagram represents.
+The big blue box represents the network that our services are bridged to and the icons are the 
+containers themselves. The one that looks like an envelope is our Message broker(I couldn't find the 
+right one on draw.io and i couldn't be bothered to look elsewhere).  
+
+We have 2 of our own services, one written in ***nodejs*** and the other written in ***python*** .
+The rest are services that come as containers on the [docker registry](https://hub.docker.com/u/library/).  
+Therefore, our major concern now is to look into building the containers for our custom  
+***nodejs*** and ***python*** service. 
+
