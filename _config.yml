@@ -21,8 +21,7 @@
 title: the_teck_nerd
 email: anirudhpanchangam@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  The Ultimate Guide
-  to Geeking out on Technology.
+  An insight into the mind of an awkward nerd.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.thetecknerd.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: AniPanchangam
